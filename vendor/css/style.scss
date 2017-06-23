@@ -1,0 +1,347 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$yellow: #ffea00;
+@media (min-width: 1200px) {
+  .container {
+    width: 1400px;
+    max-width:  100%;
+  }
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  background: #fffff3;
+}
+body{
+  margin:5px;
+  background: #f6f6f6;
+}
+header{
+  .container{
+    display: flex;
+    justify-content: space-between;
+    img{
+      margin:20px 0;
+    }
+    nav{
+      width: 100%;
+      text-align:  right;
+      align-self: center;
+      a{
+        margin: 0 25px;
+        padding: 20px 10px;
+        text-transform: uppercase;
+        color: #000;
+        font-size: 16px;
+        transition: 0.3s;
+        &:last-child{
+          margin-right: 0;
+        }
+        &:hover{
+          background: $yellow;
+          text-decoration: none;
+          transition:0.3s;
+        }
+        &.active{
+          background: $yellow;
+        }
+      }
+    }
+  }
+}
+.content{
+  .top-image{
+    background: url('../img/bg_top-image.png');
+    background-size: cover;
+    h1{
+      margin: 40px 0;
+      text-transform: uppercase;
+      background: #424146;
+      color: $yellow;
+      width: 320px;
+      padding: 20px;
+      font-size: 35px;
+    }
+  }
+  .portfolio-text{
+    text-align: center;
+    color: #424147;
+    padding: 70px 0;
+    h2{
+      text-transform: uppercase;
+      font-size: 35px;
+      margin: 0;
+    }
+    h3{
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+  }
+  .portfolio{
+    ul{
+      list-style: none;
+      display: flex;
+      li{
+        font-size: 24px;
+        a{
+          color: #424146;
+          transition: 0.3s;
+          padding:  5px 25px;
+          &:hover{
+            background: $yellow;
+            transition: 0.3s;
+            text-decoration: none;
+          }
+          &.active{
+            background: $yellow;
+          }
+        }
+      }
+    }
+    .photos{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 40px 0;
+      .image{
+        position: relative;
+        width: 32.5%;
+        cursor: pointer;
+        .arrow{
+          position: absolute;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          height: calc(100% - 60px);
+          background: rgba(255, 234, 0, 0.5);
+          i{
+            font-size: 50px;
+            color: #fff;
+            width: 150px;
+            height: 120px;
+            padding-top: 35px;
+            background: rgba(66, 65, 70, 0.8);
+          }
+        }
+        img{
+          width: 100%;
+          margin-bottom: 60px;
+          &.hidden-image{
+            position: absolute;
+            top: 0;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  background: #414146;
+  >.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    div{
+      color: #fff;
+    }
+    .column{
+      width:  35%;
+      &:first-child{
+        width: 30%;
+      }
+      &:last-child{
+        width: 25%;
+      }
+    }
+  }
+  .about-us{
+    margin: 30px 0;
+    h4{
+      margin-top:  0;
+    }
+    p{
+      font-size: 13px;
+      margin: 30px 0;
+    }
+    a{
+      display:  block;
+      background: #000;
+      width: 120px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 10px 0;
+      color: #fff;
+      transition: 0.3s;
+      border-bottom: 2px solid $yellow;
+      &:hover{
+        color:  $yellow;
+        transition: 0.3s;
+        text-decoration:  none;
+      }
+    }
+  }
+  .latest-tweets{
+    margin: 30px 0;
+    h4{
+      margin: 0;
+    }
+    .tweets{
+      margin: 30px 0;
+      .tweet{
+        display: flex;
+        i{
+          margin-right: 20px;
+          font-size: 25px;
+          margin-top: 5px;
+        }
+        .tweet-info{
+          >*{
+            display: block;
+          }
+          span{
+            font-size: 13px;
+            b{
+              color: $yellow;
+            }
+          }
+          a{
+            color: #fff;
+            font-size: 13px;
+          }
+          small{
+            font-size: 8px;
+            color:$yellow;
+            margin:10px 0;
+          }
+        }
+      }
+    }
+  }
+  .contact-info{
+    margin: 30px 0;
+    h4{
+      margin: 0;
+    }
+    .contact-information{
+      margin: 50px 0;
+      .info-point{
+        display: flex;
+        &:first-child{
+          i{
+            width: 40px;
+          }
+        }
+        i{
+          font-size: 18px;
+          width: 30px;
+          height: 30px;
+          background: #000;
+          text-align: center;
+          padding-top: 6px;
+        }
+        .info-point-info{
+          margin-left:  15px;
+          span{
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            b{
+              color: $yellow;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+  .photo-stream{
+    h4{
+      margin: 0;
+    }
+    .photo-stream-img{
+      margin: 30px 0;
+      img{
+        margin-bottom: 5px;
+        width:  32%;
+      }
+    }
+  }
+  .social-connecting{
+    h4{
+      margin: 0;
+      margin-right: 5px;
+      display: inline-block;
+
+    }
+    .social-icons{
+      display: inline-block;
+      i{
+        background: #000;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 5px;
+        width: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  .follow-us{
+    h4{
+      margin: 30px 0;
+    }
+    span{
+      margin-bottom: 15px;
+      display: block;
+      font-size: 13px;
+    }
+    input{
+      &[name='text']{
+        background: transparent;
+        border: none;
+        width: 230px;
+        border-bottom: 2px solid $yellow;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      background: #000;
+      border: none;
+      width: 30px;
+      font-size: 20px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+  .footer-menu{
+    height: 70px;
+    background: #000;
+    line-height: 70px;
+   span{
+     font-size: 14px;
+     color: #fff;
+   }
+    nav{
+      float: right;
+      a{
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0 40px;
+        cursor: pointer;
+        font-size: 16px;
+        &:last-child{
+          margin-right:0;
+        }
+      }
+    }
+  }
+}

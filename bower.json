@@ -1,0 +1,21 @@
+{
+  "name": "testwork",
+  "description": "testwork",
+  "main": "index.html",
+  "keywords": [
+    "work",
+    "test"
+  ],
+  "authors": [
+    "kvrzh"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
